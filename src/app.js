@@ -8,7 +8,7 @@ class App extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="" component={Body} key="body" />
-                    <Redirect  to='/' />
+                    <Redirect  to='/home' />
                 </Switch>
             </BrowserRouter>
         );
