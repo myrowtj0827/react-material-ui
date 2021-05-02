@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router";
 import {
     Button,
     Menu,
@@ -8,6 +9,11 @@ import {
 } from '@material-ui/core';
 
 export default function Header() {
+    const history = useHistory();
+    const onClick = () => {
+        history.push('/home');
+    };
+
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClose = () => {
@@ -19,7 +25,10 @@ export default function Header() {
 
     return (
         <Grid className="flex-space">
-            <Grid>
+            <Grid
+                className="mouse-cursor"
+                onClick={onClick}
+            >
                 <img src={require('../assets/img/pasts-reklama-logo.png')} className="logo-img" alt="logo" />
             </Grid>
             <Grid className="flex-space txt-14 txt-600 txt-line-24">

@@ -1,14 +1,22 @@
 import React from 'react';
+import { useHistory } from "react-router";
 import {
     Grid,
 } from '@material-ui/core';
 
 export default function Footer() {
+    const history = useHistory();
+    const onClick = () => {
+        history.push('/home');
+    };
     return (
         <Grid className="footer-border pt-40">
             <Grid className="home-body">
                 <Grid className="flex-footer pb-40">
-                    <Grid className="footer-logo-w">
+                    <Grid
+                        className="footer-logo-w mouse-cursor"
+                        onClick={onClick}
+                    >
                         <img className="footer-logo footer-title-h desktop-show" src={require("../assets/img/pasts-reklama-logo.png")} alt="Footer Logo" />
                         <img className="footer-mobile-logo footer-title-h mobile-show" src={require("../assets/img/mobile-logo.png")} alt="Footer Logo" />
                     </Grid>
