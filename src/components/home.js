@@ -436,7 +436,7 @@ export default function Home() {
                 <Grid className="rectangle-bg">
                     <Grid className="rectangle-p txt-700 txt-line-50 col-black">
                         <div className="txt-24 txt-line-30 txt-800 col-title">
-                            Reklāmas pozīcijas  🎉
+                            <span aria-label="product emoticon" role="img">Reklāmas pozīcijas  🎉</span>
                         </div>
                         <div className="dot-hr" />
                         <div className="justify-left">

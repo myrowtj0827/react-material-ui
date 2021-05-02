@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1262157-0ba4-4619-8704-c2caec68f055" name="Default Changelist" comment="" />
+    <list default="true" id="e1262157-0ba4-4619-8704-c2caec68f055" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1rpdLpeHdefLNVc5IZvY5Ef8itD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -48,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619676912274</updated>
       <workItem from="1619676915120" duration="44022000" />
-      <workItem from="1619801405641" duration="104958000" />
+      <workItem from="1619801405641" duration="105407000" />
     </task>
     <servers />
   </component>
@@ -60,10 +69,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="821" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619687532585" />
-    <state x="1076" y="234" width="607" height="526" key="find.popup" timestamp="1619980285669">
+    <state x="323" y="196" width="607" height="526" key="find.popup" timestamp="1619981954891">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1076" y="234" width="607" height="526" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619980285669" />
+    <state x="323" y="196" width="607" height="526" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619981954891" />
     <state x="754" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1619683196573">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -77,12 +86,6 @@
           <line>27</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/home.js</url>
-          <line>434</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/home.js</url>
