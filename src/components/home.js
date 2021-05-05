@@ -149,7 +149,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/mail-box.png")} alt="icon 1" />
+                                <img className="icon-size" src={require("../assets/img/mail-box.svg")} alt="icon 1" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Pasta nodaļas Latvijas
@@ -162,7 +162,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/nedela.png")} alt="icon 2" />
+                                <img className="icon-size" src={require("../assets/img/nedela.svg")} alt="icon 2" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Apmeklētāju skaits gadā
@@ -175,7 +175,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/nedela.png")} alt="icon 3" />
+                                <img className="icon-size" src={require("../assets/img/nedela.svg")} alt="icon 3" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Apmeklētāju skaits nedēļā
@@ -193,7 +193,7 @@ export default function Home() {
                         <div className="txt-body">
                             <div className="product-bg bg-set" />
                             <div className="img-bottom-dot">
-                                <img src={require("../assets/img/header-bg-left.png")} className="bottom-img" alt=""/>
+                                <img src={require("../assets/img/header-bg-left.svg")} className="bottom-img" alt=""/>
                             </div>
                         </div>
                     </Grid>
@@ -205,7 +205,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-48">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-2.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-2.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -219,7 +219,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-1.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-1.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -233,7 +233,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-3.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-3.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -247,7 +247,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-4.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-4.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -441,7 +441,7 @@ export default function Home() {
                         <div className="dot-hr" />
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Ekrāni pasta nodaļās
@@ -449,7 +449,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Kasu sistēmu ekrāni
@@ -457,7 +457,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 A2 Plakāti
@@ -465,7 +465,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Bukleti / leafleti
@@ -473,7 +473,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Mazie stendi
@@ -481,7 +481,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Svārstekļu izvietojums kases zonā
@@ -489,7 +489,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Neadresētā reklāma
@@ -497,7 +497,7 @@ export default function Home() {
                         </div>
                         <div className="justify-left">
                             <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
+                                <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
                             </div>
                             <div>
                                 Nestandarta reklāmas sniegšana
@@ -530,7 +530,7 @@ export default function Home() {
                             <TableBody className="txt-18 txt-700 txt-line-22 col-main-black">
                                 {rows.map((row) => (
                                     <TableRow key={row.grupa}>
-                                        <TableCell component="th" scope="row">
+                                        <TableCell component="th" className="table-first-td" scope="row">
                                             {row.grupa}
                                         </TableCell>
                                         <TableCell align="center">{row.reģions}</TableCell>
@@ -586,7 +586,7 @@ export default function Home() {
                     </Button>
                 </Grid>
 
-                <Grid className="pt-135 txt-32 txt-800 txt-line-42 col-title txt-upper">
+                <Grid className="pt-135 txt-32 txt-800 txt-line-42 col-title txt-unset">
                     Tarifi
                 </Grid>
                 <Grid className="pt-24 txt-16 txt-400 txt-line-24 col-grey-black">
@@ -599,7 +599,7 @@ export default function Home() {
                             return (
                                 <div key={"product-" + key} className="location-check">
                                     <div className="justify-left dot-border">
-                                        <img className="group-icon" src={require("../assets/img/vector-" + (key + 1).toString() + ".png")} alt="icon block 1" />
+                                        <img className="group-icon" src={require("../assets/img/vector-" + (key + 1).toString() + ".svg")} alt="icon block 1" />
                                         <div className="txt-20 txt-700 txt-line-24 col-title">{item.title}</div>
                                     </div>
                                     {item.contents && item.contents.map((content, index) => {
@@ -608,13 +608,13 @@ export default function Home() {
                                                 {
                                                     !content.amount ?
                                                         <div className="justify-left pt-24">
-                                                            <img className="location-check-icon" src={require("../assets/img/check.png")} alt="icon block 1" />
+                                                            <img className="location-check-icon" src={require("../assets/img/check.svg")} alt="icon block 1" />
                                                             <div>{content.item}</div>
                                                         </div>
                                                         :
                                                         <div className="flex-location pt-20 ">
                                                             <div className="justify-location">
-                                                                <img className="location-icon" src={require("../assets/img/vector.png")} alt="icon block 1" />
+                                                                <img className="location-icon" src={require("../assets/img/vector.svg")} alt="icon block 1" />
                                                                 <div className="desktop-show">
                                                                     {content.item}
                                                                 </div>
@@ -647,7 +647,7 @@ export default function Home() {
                                         return (
                                             <Grid className="plus-grid" key={'reklams' + i} xs={12}>
                                                 <Button className="btn-plus">
-                                                    <img className="plus-icon" src={require("../assets/img/icon-plus.png")} alt = "plus icon" />
+                                                    <img className="plus-icon" src={require("../assets/img/icon-plus.svg")} alt = "plus icon" />
                                                     <span className="font-lato txt-18 txt-700 txt-line-22 col-main-black txt-unset">
                                                         {item}
                                                     </span>
@@ -662,7 +662,7 @@ export default function Home() {
                             <div className="txt-body">
                                 <div className="right-bg-2 bg-set">
                                     <div className="img-bottom-right-dot">
-                                        <img src={require("../assets/img/header-bg-left.png")} className="bottom-img" alt="bottom bg" />
+                                        <img src={require("../assets/img/header-bg-left.svg")} className="bottom-img" alt="bottom bg" />
                                     </div>
                                 </div>
                             </div>
@@ -680,13 +680,13 @@ export default function Home() {
                         <Grid className="desktop-show">
                             <div className="flex-img">
                                 <div className="pr-16 img-title-position">
-                                    <img src={require("../assets/img/product-1.png")} className="product-1" alt="product 1" />
+                                    <img src={require("../assets/img/product-1.svg")} className="product-1" alt="product 1" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         Ekrāni pasta nodaļās
                                     </div>
                                 </div>
                                 <div className="img-title-position">
-                                    <img src={require("../assets/img/product-2.png")} className="product-1" alt="product 2" />
+                                    <img src={require("../assets/img/product-2.svg")} className="product-1" alt="product 2" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         A2 plakāti
                                     </div>
@@ -695,34 +695,34 @@ export default function Home() {
                             <div className="flex-img">
                                 <div className="pt-img-16 pr-16">
                                     <div className="img-title-position">
-                                        <img src={require("../assets/img/product-3.png")} className="product-1" alt="product 3" />
+                                        <img src={require("../assets/img/product-3.svg")} className="product-1" alt="product 3" />
                                         <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                             Mazais stends
                                         </div>
                                     </div>
                                     <div className="pt-img-16 img-title-position">
-                                        <img src={require("../assets/img/product-4.png")} className="product-1" alt="product 4" />
+                                        <img src={require("../assets/img/product-4.svg")} className="product-1" alt="product 4" />
                                         <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                             Bukleti / leafleti (svars līdz 50 gr.)
                                         </div>
                                     </div>
                                 </div>
                                 <div className="pt-center-16 pr-16 img-title-position">
-                                    <img src={require("../assets/img/product-5.png")} className="product-1" alt="product 5" />
+                                    <img src={require("../assets/img/product-5.svg")} className="product-1" alt="product 5" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         Kases sistēmu ekrāni
                                     </div>
                                 </div>
                                 <div className="pt-img-16">
                                     <div className="img-title-position">
-                                        <img src={require("../assets/img/product-6.png")} className="product-1" alt="product 6" />
+                                        <img src={require("../assets/img/product-6.svg")} className="product-1" alt="product 6" />
                                         <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                             Bukleti / leaflet
                                             (svars 51 gr. un vairāk)
                                         </div>
                                     </div>
                                     <div className="pt-img-16 img-title-position">
-                                        <img src={require("../assets/img/product-7.png")} className="product-1" alt="product 7" />
+                                        <img src={require("../assets/img/product-7.svg")} className="product-1" alt="product 7" />
                                         <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                             Svārstekļa izvietojums
                                             kases zonā
@@ -736,13 +736,13 @@ export default function Home() {
                         <Grid className="mobile-show">
                             <div className="flex-img">
                                 <div className="pr-16 img-title-position">
-                                    <img src={require("../assets/img/product-mobile-1.png")} className="product-1" alt="product 1" />
+                                    <img src={require("../assets/img/product-mobile-1.svg")} className="product-1" alt="product 1" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         Ekrāni pasta nodaļās
                                     </div>
                                 </div>
                                 <div className="img-title-position">
-                                    <img src={require("../assets/img/product-mobile-3.png")} className="product-1" alt="product 3" />
+                                    <img src={require("../assets/img/product-mobile-3.svg")} className="product-1" alt="product 3" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         Mazais stends
                                     </div>
@@ -751,7 +751,7 @@ export default function Home() {
 
                             <div className="flex-img">
                                 <div className="img-title-position">
-                                    <img src={require("../assets/img/product-mobile-2.png")} className="product-1" alt="product 2" />
+                                    <img src={require("../assets/img/product-mobile-2.svg")} className="product-1" alt="product 2" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         A2 plakāti
                                     </div>
@@ -760,14 +760,14 @@ export default function Home() {
 
                             <div className="flex-img">
                                 <div className="pr-16 pt-img-16 img-title-position">
-                                    <img src={require("../assets/img/product-mobile-7.png")} className="product-1" alt="product 7" />
+                                    <img src={require("../assets/img/product-mobile-7.svg")} className="product-1" alt="product 7" />
                                     <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                         Svārstekļa izvietojums
                                         kases zonā
                                     </div>
                                 </div>
                                 <div className="img-title-position">
-                                    <img src={require("../assets/img/product-mobile-6.png")} className="product-1" alt="product 6" />
+                                    <img src={require("../assets/img/product-mobile-6.svg")} className="product-1" alt="product 6" />
                                     <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                         Bukleti / leaflet
                                         (svars 51 gr. un vairāk)
@@ -776,13 +776,13 @@ export default function Home() {
                             </div>
                             <div className="flex-img">
                                 <div className="pr-16 pt-img-16 img-title-position">
-                                    <img src={require("../assets/img/product-mobile-4.png")} className="product-1" alt="product 4" />
+                                    <img src={require("../assets/img/product-mobile-4.svg")} className="product-1" alt="product 4" />
                                     <div className="img-title txt-24 txt-900 txt-line-30 col-white">
                                         Bukleti / leafleti (svars līdz 50 gr.)
                                     </div>
                                 </div>
                                 <div className="pt-center-16 img-title-position">
-                                    <img src={require("../assets/img/product-mobile-5.png")} className="product-1" alt="product 5" />
+                                    <img src={require("../assets/img/product-mobile-5.svg")} className="product-1" alt="product 5" />
                                     <div className="img-title txt-24 txt-900 txt-line-20 col-white">
                                         Kases sistēmu ekrāni
                                     </div>
