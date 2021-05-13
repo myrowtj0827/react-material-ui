@@ -29,24 +29,25 @@ export default function Header() {
                 className="mouse-cursor"
                 onClick={onClick}
             >
-                <img src={require('../assets/img/pasts-reklama-logo.png')} className="logo-img" alt="logo" />
+                <img src={require('../assets/img/pasts-reklama-logo.svg')} className="logo-img" alt="logo" />
             </Grid>
             <Grid className="flex-space txt-14 txt-600 txt-line-24">
                 <Grid className="pr-34">
-                    <img src={require("../assets/img/phone.png")} className="header-icon" alt="phone icon" />
+                    <img src={require("../assets/img/phone.svg")} className="header-icon" alt="phone icon" />
                     <span> +371 29352642</span>
                 </Grid>
                 <Grid className="pr-50">
-                    <img src={require("../assets/img/email.png")} className="header-icon" alt="email icon" />
+                    <img src={require("../assets/img/email.svg")} className="header-icon" alt="email icon" />
                     <span> reklamapasta@mrvls.lv</span>
                 </Grid>
                 <Grid className="txt-700">
                     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                         <span>LV </span>
-                        <img src={require("../assets/img/icon-drop-down.png")} className="header-down-icon mouse-cursor" alt="phone icon" />
+                        <img src={require("../assets/img/icon-drop-down.svg")} className="header-down-icon mouse-cursor" alt="phone icon" />
                     </Button>
                     <Menu
                         id="fade-menu"
+                        className="btn-header-drop"
                         anchorEl={anchorEl}
                         keepMounted
                         open={Boolean(anchorEl)}
@@ -54,7 +55,7 @@ export default function Header() {
                         onClose={handleClose}
                         disableScrollLock={ true }
                     >
-                        <MenuItem onClick={handleClose}>LV</MenuItem>
+                        <MenuItem className="" onClick={handleClose}>LV</MenuItem>
                         <MenuItem onClick={handleClose}>EN</MenuItem>
                         <MenuItem onClick={handleClose}>RU</MenuItem>
                     </Menu>

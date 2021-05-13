@@ -17,8 +17,8 @@ export default function Footer() {
                         className="footer-logo-w mouse-cursor"
                         onClick={onClick}
                     >
-                        <img className="footer-logo footer-title-h desktop-show" src={require("../assets/img/pasts-reklama-logo.png")} alt="Footer Logo" />
-                        <img className="footer-mobile-logo footer-title-h mobile-show" src={require("../assets/img/mobile-logo.png")} alt="Footer Logo" />
+                        <img className="footer-logo footer-title-h desktop-show" src={require("../assets/img/pasts-reklama-logo.svg")} alt="Footer Logo" />
+                        <img className="footer-mobile-logo footer-title-h mobile-show" src={require("../assets/img/mobile-logo.svg")} alt="Footer Logo" />
                     </Grid>
                     <Grid className="footer-items-w flex-footer txt-14 txt-600 txt-line-36 col-main-black">
                         <div>
@@ -55,10 +55,10 @@ export default function Footer() {
                                 Saziņai par reklāmas pakalpojumiem
                             </div>
                             <div>
-                                <img src={require("../assets/img/phone.png")} className="header-icon" alt="phone icon" /> +371 29352642
+                                <img src={require("../assets/img/phone.svg")} className="header-icon" alt="phone icon" /> +371 29352642
                             </div>
                             <div>
-                                <img src={require("../assets/img/email.png")} className="header-icon" alt="email icon" /> reklamapasta@mrvls.lv
+                                <img src={require("../assets/img/email.svg")} className="header-icon" alt="email icon" /> reklamapasta@mrvls.lv
                             </div>
                         </div>
                     </Grid>

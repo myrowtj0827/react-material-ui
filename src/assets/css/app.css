@@ -5,7 +5,7 @@
         padding: 24px 0 0 !important;
         max-width: 80% !important;
     }
-    .MuiMenu-paper {
+    .btn-header-drop > .MuiMenu-paper {
         right: 10% !important;
         left: unset !important;
     }
@@ -15,13 +15,16 @@
     .flex-space.pt-48 > div > button {
         padding: 16px 25px !important;
     }
+    .flex-grid4 {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .home-body {
         max-width: 90% !important;
     }
-    .MuiMenu-paper {
+    .btn-header-drop > .MuiMenu-paper {
         right: 5% !important;
     }
     .img-bottom-dot {
@@ -195,6 +198,9 @@
     .mt-16 {
         margin-top: 0 !important;
     }
+    .flex-grid4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -286,9 +292,6 @@
     .calculator-body {
         max-width: 90% !important;
     }
-    .flex-grid4 {
-        grid-template-columns: 1fr 1fr 1fr !important;
-    }
     .flex-mobile {
         display: block !important;
         grid-template-columns: 1fr 1fr;
@@ -296,6 +299,18 @@
     }
     .mt-16 {
         margin-top: 10px !important;
+    }
+    .flex-grid4 {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+    .MuiTableCell-root.MuiTableCell-body {
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        line-height: 24px !important;
+    }
+    .MuiTableCell-root.MuiTableCell-body.MuiTableCell-alignRight {
+        font-size: 14px !important;
+        font-weight: 700 !important;
     }
 }
 @media screen and (max-width: 600px) {
@@ -317,6 +332,9 @@
     }
     .txt-16 {
         font-size: 14px !important;
+    }
+    .footer-title-h.txt-16 {
+        font-size: 16px !important;
     }
     .txt-line-60 {
         line-height: 36px !important;
@@ -460,6 +478,12 @@
     }
     .modal-body {
         max-width: 90% !important;
+    }
+    .flex-space.pt-48 > .warning {
+        width: 45% !important;
+    }
+    .mobile-w {
+        max-width: 90%;
     }
 }
 
@@ -681,7 +705,6 @@ body {
 .txt-48 {
     font-size: 48px;
 }
-
 /**
  * common font-weight
  */
@@ -703,7 +726,6 @@ body {
 .txt-900 {
     font-weight: 900;
 }
-
 /**
  * common line height
  */
@@ -746,7 +768,6 @@ body {
 .txt-line-60 {
     line-height: 60px;
 }
-
 /**
  * common color
  */
@@ -780,7 +801,6 @@ body {
 .col-white {
     color: var(--col-white);
 }
-
 /**
  * padding
  */
@@ -1087,7 +1107,7 @@ body {
     background-repeat: no-repeat;
 }
 .rectangle-p {
-    padding: 54px 32px 42px 112px;
+    padding: 54px 12px 42px 112px;
     width: 100%;
     max-width: calc(100% - 82px);
 }
@@ -1137,6 +1157,9 @@ body {
     color: var(--col-icon-bg);
     background-color: var(--col-table-th);
     word-break: break-all;
+}
+.table-first-td {
+    min-width: 120px;
 }
 .location-check {
     padding: 36px 24px;
@@ -1320,11 +1343,15 @@ body {
     width: 100% !important;
     max-width: 412px !important;
 }
-.MuiNativeSelect-select.MuiNativeSelect-select {
+.MuiSelect-select.MuiSelect-select {
     margin-top: 10px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--col-main-black);
+}
+.calc-select.MuiListItem-gutters {
+    padding: 5px 10px !important;
+    font-weight: 500 !important;
 }
 .items-border {
     border: 1px solid var(--col-grey-3);
@@ -1336,15 +1363,15 @@ body {
 }
 .circle-check-position {
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 3px;
+    right: 3px;
 }
 .warning-icon {
     margin-right: 8px;
     width: 16px;
 }
 .flex-space.pt-48 > .warning {
-    width: 50%;
+    width: 30%;
     text-align: left;
 }
 .justify-left.warning {
@@ -1401,7 +1428,7 @@ body {
 .MuiPaper-root {
     margin-top: 50px;
 }
-.MuiMenuItem-root {
+.btn-header-drop > .MuiMenu-paper > ul > .MuiMenuItem-root {
     justify-content: center !important;
     width: 69px !important;
     height: 48px !important;
@@ -1413,9 +1440,9 @@ body {
 .MuiListItem-gutters {
     padding: 0 !important;
 }
-.MuiMenu-paper {
+.btn-header-drop > .MuiMenu-paper {
     left: unset !important;
-    right: calc(50vw - 555px);
+    right: calc(50vw - 561px);
 }
 .MuiButton-text {
     padding-right: unset !important;
@@ -1423,6 +1450,15 @@ body {
 /**
  * button
  */
+.MuiButtonBase-root,
+.MuiTableCell-root.MuiTableCell-body {
+    font-family: 'Mulish', sans-serif !important;
+}
+.MuiButtonBase-root {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 27px !important;
+}
 .MuiButtonBase-root.btn-bg-color,
 .MuiButtonBase-root.btn-bg-hover,
 .MuiButtonBase-root.btn-col {
@@ -1431,7 +1467,7 @@ body {
     text-transform: none;
 }
 .MuiButtonBase-root.btn-bg-color {
-    background-color: var(--col-btn-main-bg) !important;
+    background-color: var(--col-btn-main-bg);
     color: var(--col-white) !important;
 }
 .MuiButtonBase-root.btn-bg-hover {
@@ -1440,11 +1476,13 @@ body {
 }
 .MuiButtonBase-root.btn-col {
     border: 1px solid var(--col-btn-main-bg);
-    background-color: var(--col-btn-main-bg) !important;
-    color: var(--col-white) !important;
+    background-color: var(--col-white);
+    color: var(--col-btn-main-bg) !important;
 }
-.MuiButtonBase-root.btn-col:hover {
-    background-color: var(--col-white) !important;
+.btn-border {
+    border: 1px solid var(--col-btn-main-bg) !important;
+}
+.btn-border:hover {
     color: var(--col-btn-main-bg) !important;
 }
 .MuiButtonBase-root.btn-col:nth-child(1) {
@@ -1466,10 +1504,16 @@ body {
     width: 100%;
     max-width: 100%;
     height: 56px;
-    background-color: var(--col-btn-main-bg) !important;
+    background-color: var(--col-btn-main-bg);
     color: var(--col-white) !important;
 }
 .MuiInputLabel-shrink {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    color: var(--col-grey-black) !important;
+}
+.btn-grid2 > .MuiFormControl-root > .MuiInputLabel-shrink {
     font-size: 13px !important;
     font-weight: 600 !important;
     line-height: 16px !important;
@@ -1477,7 +1521,7 @@ body {
 }
 .MuiInputBase-input::placeholder {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 18px;
     color: var(--col-grey-black);
 }
@@ -1508,10 +1552,95 @@ body {
         margin: 10mm;
     }
 }
-
 .pr-6 {
     padding-right: 6px;
 }
 .pr-0 {
     padding-right: 0;
 }
+.mobile-w:hover {
+    color: var(--col-btn-main-bg);
+}
+.flex {
+    display: block;
+}
+.none {
+    display: none;
+}
+/**
+ * spinning
+ */
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--col-btn-main-bg);
+    border-color: var(--col-btn-main-bg) transparent var(--col-btn-main-bg) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spinning-curtain {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: unset;
+    z-index: 3000;
+}
+/**
+ * Toast
+ */
+.Toastify__toast {
+    padding: 3px 16px !important;
+    border-radius: 3px !important;
+    min-height: 45px !important;
+    max-height: 300px !important;
+    background-color: var(--col-btn-main-bg) !important;
+    color: #fff !important;
+}
+.Toastify__progress-bar {
+    height: 0 !important;
+}
+.Toastify__close-button {
+    margin-top: 10px !important;
+    opacity: 1 !important;
+    background-color: unset;
+}
+.Toastify__toast-container {
+    width: 250px;
+}
+.Toastify__close-button--default {
+    color: var(--col-white) !important;
+}
+
+.zoom-txt:hover {
+    transform: scale(1.1);
+}
+.animate-zoom {animation:animatezoom 0.9s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.animate-logout-zoom {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: var(--col-white);
+    animation:animatezoom 0.7s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.65);
+}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}

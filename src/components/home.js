@@ -10,12 +10,11 @@ import {
     TableHead,
     TableRow,
 } from '@material-ui/core';
+const config = require("../config/config");
 
 export default function Home() {
     const history = useHistory();
-    const onClick = () => {
-        history.push('/calculator');
-    };
+
     const data1 = [9, 20, 19, 19, 19, 13];
     const data2 = [25, 28, 20, 27];
     const data3 = [11, 35, 26, 15];
@@ -109,9 +108,6 @@ export default function Home() {
             ]
         },
     ];
-    const reklams_list = [
-        'Pieeja plašai auditorijai?', 'A2 plakātu izvietošana?', 'Bukletu izvietošana?', 'Svārstekļu izvietošana kases zonās?',
-        'Reklāma pasta nodaļu monitoros?', 'Mazo stendu izvietošana?', 'Nestandarta reklāmas sniegšana', 'Reklāmas izvietošanas pakalpojumu kopējie nosacījumi?'];
 
     return (
         <>
@@ -129,7 +125,6 @@ export default function Home() {
                             <div className="pt-56">
                                 <Button
                                     className="txt-16 txt-line-27 txt-800 btn-bg-color"
-                                    onClick={onClick}
                                 >
                                     Aprēķini kampaņas cenu tagad
                                 </Button>
@@ -149,7 +144,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/mail-box.png")} alt="icon 1" />
+                                <img className="icon-size" src={require("../assets/img/mail-box.svg")} alt="icon 1" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Pasta nodaļas Latvijas
@@ -162,7 +157,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/nedela.png")} alt="icon 2" />
+                                <img className="icon-size" src={require("../assets/img/nedela.svg")} alt="icon 2" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Apmeklētāju skaits gadā
@@ -175,7 +170,7 @@ export default function Home() {
                     <Grid item xs={4}>
                         <div className="icons-grid">
                             <div className="icons-circle">
-                                <img className="icon-size" src={require("../assets/img/nedela.png")} alt="icon 3" />
+                                <img className="icon-size" src={require("../assets/img/nedela.svg")} alt="icon 3" />
                             </div>
                             <div className="pt-24 txt-14 txt-700 txt-line-18 col-main-black opacity-30">
                                 Apmeklētāju skaits nedēļā
@@ -205,7 +200,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-48">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-2.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-2.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -219,7 +214,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-1.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-1.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -233,7 +228,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-3.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-3.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -247,7 +242,7 @@ export default function Home() {
 
                             <Grid className="justify-left icons-4 pt-40">
                                 <div className="small-icon-grid">
-                                    <img className="icon-size" src={require("../assets/img/icon-4.png")} alt="icon" />
+                                    <img className="icon-size" src={require("../assets/img/icon-4.svg")} alt="icon" />
                                 </div>
                                 <div className="pl-24">
                                     <div className="txt-18 txt-700 txt-line-27 col-main-black">
@@ -381,7 +376,7 @@ export default function Home() {
                                         opacity = Math.ceil(opacity * radio * 9) / 10;
                                     }
                                     return (
-                                        <div className="bottom-p txt-12 txt-line-15 txt-600" key={"stick-3-" + key}>
+                                        <div className="bottom-p txt-12 txt-line-15 txt-600" key={"stick-4-" + key}>
                                             <div className="pb-8 col-gray-1 align-c">
                                                 {item}%
                                             </div>
@@ -412,7 +407,7 @@ export default function Home() {
                                         opacity = Math.ceil(opacity * radio * 11) / 10;
                                     }
                                     return (
-                                        <div className="bottom-p txt-12 txt-line-15 txt-600" key={"stick-3-" + key}>
+                                        <div className="bottom-p txt-12 txt-line-15 txt-600" key={"stick-5-" + key}>
                                             <div className="pb-8 col-gray-1 align-c">
                                                 {item}%
                                             </div>
@@ -439,70 +434,24 @@ export default function Home() {
                             <span aria-label="product emoticon" role="img">Reklāmas pozīcijas  🎉</span>
                         </div>
                         <div className="dot-hr" />
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Ekrāni pasta nodaļās
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Kasu sistēmu ekrāni
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                A2 Plakāti
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Bukleti / leafleti
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Mazie stendi
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Svārstekļu izvietojums kases zonā
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Neadresētā reklāma
-                            </div>
-                        </div>
-                        <div className="justify-left">
-                            <div>
-                                <img className="check-icon" src={require("../assets/img/check.png")} alt="check icon" />
-                            </div>
-                            <div>
-                                Nestandarta reklāmas sniegšana
-                            </div>
-                        </div>
+                        {
+                            config.REKLAMS_LIST && config.REKLAMS_LIST.map((item, key) => {
+                              return (
+                                  <div
+                                      key={"list-" + key}
+                                      className="justify-left mobile-w mouse-cursor"
+                                      onClick={() => history.push('/calculator/' + config.ROUTER_SLUG[key])}
+                                  >
+                                      <div>
+                                          <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
+                                      </div>
+                                      <div>
+                                          {item}
+                                      </div>
+                                  </div>
+                              )
+                            })
+                        }
                     </Grid>
                 </Grid>
             </section>
@@ -530,7 +479,7 @@ export default function Home() {
                             <TableBody className="txt-18 txt-700 txt-line-22 col-main-black">
                                 {rows.map((row) => (
                                     <TableRow key={row.grupa}>
-                                        <TableCell component="th" scope="row">
+                                        <TableCell component="th" className="table-first-td" scope="row">
                                             {row.grupa}
                                         </TableCell>
                                         <TableCell align="center">{row.reģions}</TableCell>
@@ -544,8 +493,8 @@ export default function Home() {
                     </TableContainer>
 
                     {/* mobile version*/}
-                    {rows.map((row) => (
-                        <div className="pt-8">
+                    {rows.map((row, key) => (
+                        <div className="pt-8" key={'group-mobile-' + key}>
                             <TableContainer className="table-border mobile">
                                 <Table aria-label="simple table">
                                     <TableBody className="txt-16 txt-line-24 txt-800 col-icon-bg">
@@ -580,13 +529,12 @@ export default function Home() {
                 <Grid className="pt-16">
                     <Button
                         className="txt-16 txt-line-27 txt-800 btn-bg-color"
-                        onClick={onClick}
                     >
                         Aprēķini kampaņas cenu tagad
                     </Button>
                 </Grid>
 
-                <Grid className="pt-135 txt-32 txt-800 txt-line-42 col-title txt-upper">
+                <Grid className="pt-135 txt-32 txt-800 txt-line-42 col-title txt-unset">
                     Tarifi
                 </Grid>
                 <Grid className="pt-24 txt-16 txt-400 txt-line-24 col-grey-black">
@@ -599,7 +547,7 @@ export default function Home() {
                             return (
                                 <div key={"product-" + key} className="location-check">
                                     <div className="justify-left dot-border">
-                                        <img className="group-icon" src={require("../assets/img/vector-" + (key + 1).toString() + ".png")} alt="icon block 1" />
+                                        <img className="group-icon" src={require("../assets/img/vector-" + (key + 1).toString() + ".svg")} alt="icon block 1" />
                                         <div className="txt-20 txt-700 txt-line-24 col-title">{item.title}</div>
                                     </div>
                                     {item.contents && item.contents.map((content, index) => {
@@ -608,13 +556,13 @@ export default function Home() {
                                                 {
                                                     !content.amount ?
                                                         <div className="justify-left pt-24">
-                                                            <img className="location-check-icon" src={require("../assets/img/check.png")} alt="icon block 1" />
+                                                            <img className="location-check-icon" src={require("../assets/img/check.svg")} alt="icon block 1" />
                                                             <div>{content.item}</div>
                                                         </div>
                                                         :
                                                         <div className="flex-location pt-20 ">
                                                             <div className="justify-location">
-                                                                <img className="location-icon" src={require("../assets/img/vector.png")} alt="icon block 1" />
+                                                                <img className="location-icon" src={require("../assets/img/vector.svg")} alt="icon block 1" />
                                                                 <div className="desktop-show">
                                                                     {content.item}
                                                                 </div>
@@ -643,11 +591,11 @@ export default function Home() {
                         <Grid item className="plus-left-btns">
                             <div className="txt-body">
                                 {
-                                    reklams_list && reklams_list.map((item, i) => {
+                                    config.REKLAMS_LIST && config.REKLAMS_LIST.map((item, i) => {
                                         return (
-                                            <Grid className="plus-grid" key={'reklams' + i} xs={12}>
+                                            <Grid className="plus-grid" key={'reklams' + i}>
                                                 <Button className="btn-plus">
-                                                    <img className="plus-icon" src={require("../assets/img/icon-plus.png")} alt = "plus icon" />
+                                                    <img className="plus-icon" src={require("../assets/img/icon-plus.svg")} alt = "plus icon" />
                                                     <span className="font-lato txt-18 txt-700 txt-line-22 col-main-black txt-unset">
                                                         {item}
                                                     </span>
@@ -794,7 +742,6 @@ export default function Home() {
                     <Grid className="pt-48">
                         <Button
                             className="txt-16 txt-line-27 txt-800 btn-bg-color"
-                            onClick={onClick}
                         >
                             Aprēķini kampaņas cenu tagad
                         </Button>

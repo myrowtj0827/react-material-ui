@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../assets/css/index.css';
 import { Route, Switch, Redirect } from "react-router-dom"
 
+import '../assets/css/index.css';
 import Home from "./home";
 import Header from "./header";
 import Footer from "./footer";
@@ -20,7 +20,7 @@ class Body extends Component {
                         component={Home}
                     />
                     <Route
-                        path='/calculator'
+                        path='/calculator/:slug?'
                         component={Calculator}
                     />
                     <Redirect
