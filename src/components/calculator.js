@@ -237,7 +237,6 @@ function Calculator(props) {
     const handleClose = () => {
         setOpen(false);
     };
-
     const onSelectValue = (type, e) => {
         if (type === 1) {
             setSelectedService(e.target.value);
