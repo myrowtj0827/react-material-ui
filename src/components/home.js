@@ -121,7 +121,7 @@ export default function Home() {
     ];
 
     const onPageLink = (link) => {
-        window.location.href = '/calculator/' + link;
+        history.push('/calculator/' + link);
     };
 
     return (

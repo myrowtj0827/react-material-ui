@@ -94,6 +94,10 @@ function Calculator(props) {
     }, [msg_info, reset]);
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+    useEffect(() => {
         let data;
         if (selected_period > 0) {
             if (isSelect === 2) {                      // in the case of type === "pos_screens"
