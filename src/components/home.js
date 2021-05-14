@@ -604,32 +604,57 @@ export default function Home() {
                         Reklāms izvietošanas nosacījumi
                     </div>
 
-                    <Grid container className="contents-center pt-64" spacing={6}>
+                    <Grid container className="pt-64" spacing={6}>
                         <Grid item className="plus-left-btns">
                             <div className="txt-body">
                                 <List component="nav">
                                     {
-                                        config.REKLAMS_LIST && config.REKLAMS_LIST.map((item, i) => {
+                                        config.FAQ_LIST && config.FAQ_LIST.map((item, i) => {
                                             return (
                                                 <>
                                                     <ListItem button key={"list-" + i} onClick={() => handleClick(i + 1)}>
                                                         <Grid className="plus-grid">
                                                             <Button className="btn-plus">
-                                                                <img className="plus-icon" src={require("../assets/img/icon-plus.svg")} alt = "plus icon" />
-                                                                <span className="font-lato txt-18 txt-700 txt-line-22 col-main-black txt-unset">
+                                                                <img className="plus-icon" src={require("../assets/img/icon-" + (open !== i + 1 ? "plus" : "minus") + ".svg")} alt = "plus icon" />
+                                                                <span className="txt-18 txt-700 txt-line-22 col-main-black txt-unset">
                                                                     {item}
                                                                 </span>
                                                             </Button>
                                                         </Grid>
                                                     </ListItem>
                                                     <Collapse in={open === i + 1} timeout="auto" unmountOnExit>
-                                                        <List component="div" disablePadding>
-                                                            <ListItem button>
-                                                                <span className="pl-24 txt-14 col-grey-black txt-500">
-                                                                    {item}
-                                                                </span>
-                                                            </ListItem>
-                                                        </List>
+                                                        <ul className="pl-sub">
+                                                            {
+                                                                config.FAQ_ANSWER_LIST && config.FAQ_ANSWER_LIST[i].map((sub_item, j) => {
+                                                                    return (
+                                                                        <li>
+                                                                            <List component="div" disablePadding>
+                                                                                <ListItem button key={"list-" + i + "-" + j}>
+                                                                                    <span className="pt-12 txt-16 txt-line-24 txt-400 col-main-black">
+                                                                                        {sub_item}
+                                                                                    </span>
+                                                                                </ListItem>
+                                                                                {
+                                                                                    i === 4 && j === 0 && (
+                                                                                        <ul className="pt-12 align-l">
+                                                                                            {
+                                                                                                config.FAQ_SUB_ANSWER && config.FAQ_SUB_ANSWER.map((terms, k) => {
+                                                                                                    return (
+                                                                                                        <li>
+                                                                                                            {terms}
+                                                                                                        </li>
+                                                                                                    )
+                                                                                                })
+                                                                                            }
+                                                                                        </ul>
+                                                                                    )
+                                                                                }
+                                                                            </List>
+                                                                        </li>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </ul>
                                                     </Collapse>
                                                 </>
                                             )

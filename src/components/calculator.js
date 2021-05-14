@@ -181,8 +181,10 @@ function Calculator(props) {
                 window.location = get_pdf.pdf;
             else
                 window.open(get_pdf.pdf, '_blank');
+
+            reset();
         }
-    }, [get_pdf]);
+    }, [get_pdf, reset]);
 
     useEffect(() => {
         if (errorArray.length > 0) {

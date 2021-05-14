@@ -22,6 +22,10 @@ export const reset = () => dispatch => {
     dispatch({
         type: MSG_INFO,
         payload: '',
+    });
+    dispatch({
+        type: GET_PDF,
+        payload: '',
     })
 };
 
