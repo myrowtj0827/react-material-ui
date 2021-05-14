@@ -629,7 +629,7 @@ export default function Home() {
                                                                     return (
                                                                         <li>
                                                                             <List component="div" disablePadding>
-                                                                                <ListItem button key={"list-" + i + "-" + j}>
+                                                                                <ListItem key={"list-" + i + "-" + j}>
                                                                                     <span className="pt-12 txt-16 txt-line-24 txt-400 col-main-black">
                                                                                         {sub_item}
                                                                                     </span>
