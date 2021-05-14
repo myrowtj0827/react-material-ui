@@ -42,7 +42,7 @@ export default function Header() {
                 </Grid>
                 <Grid className="txt-700">
                     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                        <span>LV </span>
+                        <span className="txt-14 txt-700 txt-line-24 col-main-black">LV </span>
                         <img src={require("../assets/img/icon-drop-down.svg")} className="header-down-icon mouse-cursor" alt="phone icon" />
                     </Button>
                     <Menu
@@ -55,9 +55,18 @@ export default function Header() {
                         onClose={handleClose}
                         disableScrollLock={ true }
                     >
-                        <MenuItem className="" onClick={handleClose}>LV</MenuItem>
-                        <MenuItem onClick={handleClose}>EN</MenuItem>
-                        <MenuItem onClick={handleClose}>RU</MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <span className="txt-14 txt-700 txt-line-24 col-main-black">LV</span></MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <span className="txt-14 txt-700 txt-line-24 col-main-black">
+                                EN
+                            </span>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <span className="txt-14 txt-700 txt-line-24 col-main-black">
+                                RU
+                            </span>
+                        </MenuItem>
                     </Menu>
                 </Grid>
             </Grid>

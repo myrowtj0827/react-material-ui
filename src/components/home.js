@@ -9,11 +9,22 @@ import {
     TableContainer,
     TableHead,
     TableRow,
+    List,
+    ListItem,
+    Collapse,
 } from '@material-ui/core';
 const config = require("../config/config");
 
 export default function Home() {
     const history = useHistory();
+    const [open, setOpen] = React.useState(0);
+
+    const handleClick = (k) => {
+        if (open === k)
+            setOpen(0);
+        else
+            setOpen(k);
+    };
 
     const data1 = [9, 20, 19, 19, 19, 13];
     const data2 = [25, 28, 20, 27];
@@ -109,6 +120,10 @@ export default function Home() {
         },
     ];
 
+    const onPageLink = (link) => {
+        window.location.href = '/calculator/' + link;
+    };
+
     return (
         <>
             <section className="home-body">
@@ -125,6 +140,7 @@ export default function Home() {
                             <div className="pt-56">
                                 <Button
                                     className="txt-16 txt-line-27 txt-800 btn-bg-color"
+                                    onClick={() => history.push('/calculator/screens')}
                                 >
                                     Aprēķini kampaņas cenu tagad
                                 </Button>
@@ -430,8 +446,8 @@ export default function Home() {
             <section className="reklama-bg">
                 <Grid className="rectangle-bg">
                     <Grid className="rectangle-p txt-700 txt-line-50 col-black">
-                        <div className="txt-24 txt-line-30 txt-800 col-title">
-                            <span aria-label="product emoticon" role="img">Reklāmas pozīcijas  🎉</span>
+                        <div className="txt-line-15">
+                            <img src={require("../assets/img/reklamas.png")} alt="reklamas" />
                         </div>
                         <div className="dot-hr" />
                         {
@@ -440,7 +456,7 @@ export default function Home() {
                                   <div
                                       key={"list-" + key}
                                       className="justify-left mobile-w mouse-cursor"
-                                      onClick={() => history.push('/calculator/' + config.ROUTER_SLUG[key])}
+                                      onClick={() => onPageLink(config.ROUTER_SLUG[key])}
                                   >
                                       <div>
                                           <img className="check-icon" src={require("../assets/img/check.svg")} alt="check icon" />
@@ -477,8 +493,8 @@ export default function Home() {
                                 </TableRow>
                             </TableHead>
                             <TableBody className="txt-18 txt-700 txt-line-22 col-main-black">
-                                {rows.map((row) => (
-                                    <TableRow key={row.grupa}>
+                                {rows.map((row, key) => (
+                                    <TableRow key={"table-" + key}>
                                         <TableCell component="th" className="table-first-td" scope="row">
                                             {row.grupa}
                                         </TableCell>
@@ -529,6 +545,7 @@ export default function Home() {
                 <Grid className="pt-16">
                     <Button
                         className="txt-16 txt-line-27 txt-800 btn-bg-color"
+                        onClick={() => history.push('/calculator/screens')}
                     >
                         Aprēķini kampaņas cenu tagad
                     </Button>
@@ -552,11 +569,11 @@ export default function Home() {
                                     </div>
                                     {item.contents && item.contents.map((content, index) => {
                                         return (
-                                            <div className="txt-600 txt-line-24 col-main-black" key={'product-content-' + index}>
+                                            <div className="txt-600 txt-line-24 col-main-black" key={'product-content-' + key + '-' + index}>
                                                 {
                                                     !content.amount ?
                                                         <div className="justify-left pt-24">
-                                                            <img className="location-check-icon" src={require("../assets/img/check.svg")} alt="icon block 1" />
+                                                            <img className="location-check-icon" src={require("../assets/img/thin-check.svg")} alt="icon block 1" />
                                                             <div>{content.item}</div>
                                                         </div>
                                                         :
@@ -590,20 +607,35 @@ export default function Home() {
                     <Grid container className="contents-center pt-64" spacing={6}>
                         <Grid item className="plus-left-btns">
                             <div className="txt-body">
-                                {
-                                    config.REKLAMS_LIST && config.REKLAMS_LIST.map((item, i) => {
-                                        return (
-                                            <Grid className="plus-grid" key={'reklams' + i}>
-                                                <Button className="btn-plus">
-                                                    <img className="plus-icon" src={require("../assets/img/icon-plus.svg")} alt = "plus icon" />
-                                                    <span className="font-lato txt-18 txt-700 txt-line-22 col-main-black txt-unset">
-                                                        {item}
-                                                    </span>
-                                                </Button>
-                                            </Grid>
-                                        )
-                                    })
-                                }
+                                <List component="nav">
+                                    {
+                                        config.REKLAMS_LIST && config.REKLAMS_LIST.map((item, i) => {
+                                            return (
+                                                <>
+                                                    <ListItem button key={"list-" + i} onClick={() => handleClick(i + 1)}>
+                                                        <Grid className="plus-grid">
+                                                            <Button className="btn-plus">
+                                                                <img className="plus-icon" src={require("../assets/img/icon-plus.svg")} alt = "plus icon" />
+                                                                <span className="font-lato txt-18 txt-700 txt-line-22 col-main-black txt-unset">
+                                                                    {item}
+                                                                </span>
+                                                            </Button>
+                                                        </Grid>
+                                                    </ListItem>
+                                                    <Collapse in={open === i + 1} timeout="auto" unmountOnExit>
+                                                        <List component="div" disablePadding>
+                                                            <ListItem button>
+                                                                <span className="pl-24 txt-14 col-grey-black txt-500">
+                                                                    {item}
+                                                                </span>
+                                                            </ListItem>
+                                                        </List>
+                                                    </Collapse>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </List>
                             </div>
                         </Grid>
                         <Grid item className="first-bg plus-right-bg">
@@ -742,6 +774,7 @@ export default function Home() {
                     <Grid className="pt-48">
                         <Button
                             className="txt-16 txt-line-27 txt-800 btn-bg-color"
+                            onClick={() => history.push('/calculator/screens')}
                         >
                             Aprēķini kampaņas cenu tagad
                         </Button>

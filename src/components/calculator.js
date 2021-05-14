@@ -57,18 +57,18 @@ function Calculator(props) {
     // const
     const classes = useStyles();
     const [isSelect, setIsSelect] = React.useState(slug ? config.ROUTER_SLUG.indexOf(slug) + 1 : null);
-    const [selected_service, setSelectedService] = React.useState(0);
-    const [selected_commercial, setSelectedCommercial] = React.useState(0);
-    const [selected_period, setSelectedPeriod] = React.useState(0);
-    const [selected_count, setSelectedCount] = React.useState(0);
-    const [count_array, setCountArray] = React.useState(0);
+    const [selected_service, setSelectedService] = React.useState(1);
+    const [selected_commercial, setSelectedCommercial] = React.useState(1);
+    const [selected_period, setSelectedPeriod] = React.useState(1);
+    const [selected_count, setSelectedCount] = React.useState(1);
+    const [count_array, setCountArray] = React.useState(1);
 
     const [request_data, setRequestData] = React.useState(null);
     const [get_price, setGetPrice] = React.useState(null);
     const [total_price, setTotalPrice] = React.useState(0);
     const [get_list, setGetList] = React.useState([]);
 
-    const { onGetCalc, onGetPdf, onSendInfo, get_select_production, msg_info, get_pdf, spinning } = props;
+    const { onGetCalc, onGetPdf, onSendInfo, reset, get_select_production, msg_info, get_pdf, spinning } = props;
     /**
      * Modal
      */
@@ -78,16 +78,20 @@ function Calculator(props) {
     const [email, setEmail] = React.useState();
     const [phone, setPhone] = React.useState();
     const [errorArray, setErrorArray] = React.useState([]);
+
     useEffect(() => {
         if (msg_info) {
             if (msg_info) {
                 toast("Thanks");
-                setOpen(false);
+                setTimeout(() => {
+                    reset();
+                    setOpen(false);
+                });
             } else {
                 toast(msg_info.result);
             }
         }
-    }, [msg_info]);
+    }, [msg_info, reset]);
 
     useEffect(() => {
         let data;
@@ -140,10 +144,6 @@ function Calculator(props) {
     }, [get_select_production, get_list]);
 
     useEffect(() => {
-        setGetPrice(0);
-    }, [total_price]);
-
-    useEffect(() => {
         let count;
         let array = [];
         if (selected_service === 1)
@@ -158,8 +158,8 @@ function Calculator(props) {
             array.push(k);
         }
         setCountArray(array);
-        setSelectedCount(0);
-    }, [selected_service]);
+        setSelectedCount(1);
+    }, [selected_service, isSelect]);
 
     useEffect(() => {
         if (isSelect === 7) {
@@ -173,11 +173,10 @@ function Calculator(props) {
 
     useEffect(() => {
         if (get_pdf) {
-            const hiddenElement = document.createElement('a');
-            hiddenElement.href = get_pdf.pdf;
-            hiddenElement.target = '_blank';
-            hiddenElement.download = 'orderData.pdf';
-            hiddenElement.click();
+            if (navigator.userAgent && navigator.userAgent.includes('Firefox'))
+                window.location = get_pdf.pdf;
+            else
+                window.open(get_pdf.pdf, '_blank');
         }
     }, [get_pdf]);
 
@@ -198,7 +197,7 @@ function Calculator(props) {
             list.push(insert_data);
             setGetList(list);
             setTotalPrice(total_price + Number(get_price));
-            onInit();
+            // onInit();
         }
     };
 
@@ -210,14 +209,15 @@ function Calculator(props) {
     };
 
     const onDownloadPdf = () => {
-        onGetPdf(get_list);
+        if (get_list && get_list.length > 0)
+            onGetPdf(get_list);
     };
 
     const onInit = () => {
-        setSelectedService(0);
-        setSelectedCommercial(0);
-        setSelectedPeriod(0);
-        setSelectedCount(0);
+        setSelectedService(1);
+        setSelectedCommercial(1);
+        setSelectedPeriod(1);
+        setSelectedCount(1);
         setCountArray(null);
         setGetPrice(null);
         setRequestData(null);
@@ -232,7 +232,8 @@ function Calculator(props) {
     };
 
     const handleOpen = () => {
-        setOpen(true);
+        if (get_list && get_list.length > 0)
+            setOpen(true);
     };
     const handleClose = () => {
         setOpen(false);
@@ -240,7 +241,7 @@ function Calculator(props) {
     const onSelectValue = (type, e) => {
         if (type === 1) {
             setSelectedService(e.target.value);
-            setSelectedCount(0);
+            setSelectedCount(1);
         }
         else if (type === 2)
             setSelectedCommercial(e.target.value);
@@ -385,7 +386,6 @@ function Calculator(props) {
                                                                 )
                                                             })
                                                     }
-
                                                 </Select>
                                             </FormControl>
                                         </div>
@@ -393,7 +393,7 @@ function Calculator(props) {
                                 }
 
                                 {
-                                    count_array && count_array.length > 0 &&
+                                    slug !== "pos_screens" && count_array && count_array.length > 0 &&
                                         <div className="txt-400 col-grey-black">
                                             <FormControl className={classes.formControl}>
                                                 <InputLabel id="demo-simple-select-helper-label-2">
@@ -572,7 +572,7 @@ function Calculator(props) {
                                                 <div className="txt-18 txt-line-24 txt-800 col-main-black align-r">
                                                     €{item.price}
                                                 </div>
-                                                <div className="txt-16 txt-line-20 txt-700 col-btn-main-bg mouse-cursor">
+                                                <div className="txt-16 txt-line-20 txt-700 col-btn-main-bg mouse-cursor align-r">
                                                     <Button
                                                         className="btn-remove"
                                                         onClick={() => onRemove(key)}
@@ -600,13 +600,23 @@ function Calculator(props) {
 
                         <Grid className="pt-32 txt-16 txt-line-27 txt-800 justify-end btn-download">
                             <Button
-                                className="btn-col"
+                                className={
+                                    get_list && get_list.length > 0 ?
+                                        "btn-col"
+                                        :
+                                        "disable-bg btn-border"
+                                }
                                 onClick={onDownloadPdf}
                             >
                                 Download PDF
                             </Button>
                             <Button
-                                className="btn-bg-color btn-border"
+                                className={
+                                    get_list && get_list.length > 0 ?
+                                        "btn-bg-color btn-border"
+                                        :
+                                        "disable-bg btn-border"
+                                }
                                 onClick={handleOpen}
                             >
                                 Veikt pasūtījumu

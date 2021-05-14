@@ -19,6 +19,10 @@ export const reset = () => dispatch => {
         type: GET_SELECT_PRODUCTION,
         payload: '',
     });
+    dispatch({
+        type: MSG_INFO,
+        payload: '',
+    })
 };
 
 /**
