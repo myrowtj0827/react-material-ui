@@ -630,13 +630,13 @@ export default function Home() {
                                                                         <li>
                                                                             <List component="div" disablePadding>
                                                                                 <ListItem key={"list-" + i + "-" + j}>
-                                                                                    <span className="pt-12 txt-16 txt-line-24 txt-400 col-main-black">
+                                                                                    <span className="txt-justify pt-12 txt-16 txt-line-24 txt-400 col-main-black">
                                                                                         {sub_item}
                                                                                     </span>
                                                                                 </ListItem>
                                                                                 {
                                                                                     i === 4 && j === 0 && (
-                                                                                        <ul className="pt-12 align-l">
+                                                                                        <ul className="txt-justify pt-12 align-l">
                                                                                             {
                                                                                                 config.FAQ_SUB_ANSWER && config.FAQ_SUB_ANSWER.map((terms, k) => {
                                                                                                     return (
